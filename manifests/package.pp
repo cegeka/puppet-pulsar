@@ -1,4 +1,4 @@
-# Class: pulsar::service
+# Class: pulsar::package
 #
 # This module manages pulsar
 #
