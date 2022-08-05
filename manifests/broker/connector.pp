@@ -11,7 +11,7 @@
 # Sample Usage:
 #
 define pulsar::broker::connector(
-  ensure = present
+  $ensure = present
 ) {
 
   package { "apache-pulsar-connector-${title}":
