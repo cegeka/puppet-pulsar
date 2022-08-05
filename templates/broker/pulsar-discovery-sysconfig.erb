@@ -1,0 +1,9 @@
+# THIS FILE IS MANAGED BY PUPPET, DO NOT EDIT MANUALLY!
+PULSAR_discovery_CONF=<%= scope.lookupvar("pulsar::config_name_discovery") %>
+PULSAR_PID_DIR=/var/run/pulsar/discovery.pid
+PULSAR_EXTRA_OPTS="-XX:+IgnoreUnrecognizedVMOptions -Dlog4j2.formatMsgNoLookups=true <%= @real_pulsar_extra_opts -%>"
+PULSAR_MEM="<%= @real_pulsar_mem_opts -%>"
+PULSAR_LOG_DIR=<%= scope.lookupvar("pulsar::log_dir") %>
+PULSAR_LOG_FILE=pulsar-discovery.log
+PULSAR_LOG_LEVEL=info
+PULSAR_ROUTING_APPENDER_DEFAULT=<%= scope.lookupvar("pulsar::logger") %>
