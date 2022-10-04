@@ -29,4 +29,13 @@ class pulsar::broker::logging (
     group  => 'pulsar'
   }
 
+  file { '/opt/pulsar/conf/log4j2.yaml':
+    ensure  => 'file',
+    mode    => '0755',
+    owner   => 'pulsar',
+    group   => 'pulsar',
+    content => template('pulsar/broker/pulsar_log4j2_conf.yaml.erb'),
+    require => Package['apache-pulsar']
+  }
+
 }

@@ -28,6 +28,7 @@ class pulsar(
   $logger                   = $::pulsar::params::logger,
   $broker_extra_opts        = undef,
   $broker_mem_opts          = $::pulsar::params::broker_mem_opts,
+  $broker_json_logging      = $::pulsar::params::broker_json_logging,
   $discovery_extra_opts     = undef,
   $discovery_mem_opts       = undef
   ) inherits pulsar::params {
