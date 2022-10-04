@@ -20,7 +20,8 @@ class pulsar::params (
   $config_name_discovery = '/opt/pulsar/conf/discovery.conf',
   $log_dir = '/var/log/pulsar',
   $logger = 'RollingFile',
-  $broker_mem_opts = '-Xms2g -Xmx2g -XX:MaxDirectMemorySize=4g'
+  $broker_mem_opts = '-Xms2g -Xmx2g -XX:MaxDirectMemorySize=4g',
+  $broker_json_logging = true
 ) {
 
 }
