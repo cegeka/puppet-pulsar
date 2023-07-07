@@ -15,7 +15,7 @@ define pulsar::broker::client_setting (
   $value
 ) {
 
-  augeas { "pulsar_broker_${title}":
+  augeas { "pulsar_broker_client_${title}":
     lens    => 'Shellvars.lns',
     incl    => $pulsar::client_config_name_broker,
     context => "/files/${pulsar::client_config_name_broker}",
