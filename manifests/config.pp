@@ -24,6 +24,13 @@ class pulsar::config (
     require => Package[$pulsar::package_name]
   }
 
+  file { $client_config_name_broker :
+    ensure  => $config_ensure,
+    owner   => 'pulsar',
+    group   => 'pulsar',
+    require => Package[$pulsar::package_name]
+  }
+
   file { $config_name_discovery :
     ensure  => $config_ensure,
     owner   => 'pulsar',

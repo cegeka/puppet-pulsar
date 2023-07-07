@@ -17,6 +17,7 @@ class pulsar::params (
   $config_ensure = 'present',
   $config_folder = '/opt/pulsar/conf',
   $config_name_broker = '/opt/pulsar/conf/broker.conf',
+  $client_config_name_broker = '/opt/pulsar/conf/client.conf',
   $config_name_discovery = '/opt/pulsar/conf/discovery.conf',
   $log_dir = '/var/log/pulsar',
   $logger = 'RollingFile',
